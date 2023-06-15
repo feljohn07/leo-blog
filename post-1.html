@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Blog Post - Machine Learning</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="index.html">CSC 120</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-1.html"><strong>Neural Network</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-2.html"><strong>Deep Learning</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-3.html"><strong>LOGISTIC REGRESSION</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-4.html"><strong>SIMPLE LINEAR REGRESSION</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-5.html"><strong>reinforcement learning</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background: url(&quot;assets/img/1_vBIWWCFLLzZzGes1HcCJOw.jpg&quot;) no-repeat;background-size: cover;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="post-heading">
+                        <h1><strong>Neural Network</strong></h1>
+                        <h2 class="subheading"></h2><span class="meta">Kierwinjan Matias<br>Leo Alegre<br>Joanna Mae Domingo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <h1><strong>Introduction</strong></h1>
+                    <p>Using CNNs to Classify Hand-written Digits on MNIST Dataset</p>
+                    <p style="text-align: justify;">MNIST (Modified National Institute of Standards and Technology) is a well-known dataset used in Computer Vision that was built by Yann Le Cun et al. It is composed of images that are handwritten digits (0-9), split into a training set of 50,000 images and a test set of 10,000, where each image is 28 x 28 pixels in width and height.</p>
+                    <p style="text-align: justify;">This dataset is often used for practicing any algorithm made for image classification, as the dataset is fairly easy to conquer.&nbsp;</p>
+                    <h2 class="section-heading">Result and Discussion</h2><img class="img-fluid" src="assets/img/post1/Picture1.png">
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">The code block imports the required modules and packages for working with the MNIST dataset and building a neural network model using Keras. By importing these modules and packages, we have access to the necessary tools for working with the MNIST dataset and building a neural network model using Keras.</span><br><br></p>
+                    <div>
+                        <div class="row">
+                            <div class="col"><img class="img-fluid" src="assets/img/post1/Picture2.png"></div>
+                            <div class="col"><img class="img-fluid" src="assets/img/post1/Picture3.png" width="356" height="199"></div>
+                        </div>
+                    </div>
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">This code block generates a 5x5 grid of subplots using matplotlib's </span><span style="color: rgb(24, 128, 56); background-color: transparent;">subplots()</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> function. It then displays a selection of grayscale images from the </span><span style="color: rgb(24, 128, 56); background-color: transparent;">X_train</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> dataset, which contains the training images from the MNIST dataset. The </span><span style="color: rgb(24, 128, 56); background-color: transparent;">imshow()</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> function is used to display each image on its corresponding subplot, and </span><span style="color: rgb(24, 128, 56); background-color: transparent;">set_axis_off()</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> is used to remove axis labels and ticks from the subplots. Finally, the </span><span style="color: rgb(24, 128, 56); background-color: transparent;">plt.show()</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> function displays the grid of subplots with the images. Overall, this code provides a visual representation of a subset of the MNIST dataset.</span></p><img class="img-fluid" src="assets/img/post1/Picture4.png">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">The given code prepares image data for classification using convolutional neural networks (CNNs).&nbsp;</span><br><br></p>
+                    <ol>
+                        <li style="margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Reshaping the data: The input images, represented as a 28x28 pixel matrix, are reshaped into a 4D tensor format with dimensions (number of samples, 28, 28, 1). This is necessary to match the input requirements of CNN models.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Data normalization: The pixel values of the images are normalized by dividing them by 255. This rescales the values to a range between 0 and 1, which helps in improving the training process.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">One-hot encoding: The target variable, y_train and y_test, representing class labels, is converted into a binary matrix using one-hot encoding. This is achieved using the np_utils.to_categorical() function from the Keras library. The number of classes is set to 10, indicating the total number of possible classes.</span></li>
+                    </ol>
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">The code then prints the shape of the target variable before and after one-hot encoding, providing a glimpse into the data structure. These preprocessing steps are essential for effectively training a CNN model for image classification tasks.</span><br><br></p><img class="img-fluid" src="assets/img/post1/Picture5.png">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">The code defines a sequential model for image classification using a Convolutional Neural Network (CNN)</span><br><br></p>
+                    <ul>
+                        <li><span style="color: rgb(0, 0, 0); background-color: transparent;">Sequential model creation: The model is initialized as a sequential object, indicating a linear stack of layers.</span></li>
+                        <li><span style="color: rgb(0, 0, 0); background-color: transparent;">Convolutional layer: A 2D convolutional layer is added to the model. It applies 25 filters of size (3,3) with a rectified linear unit (ReLU) activation function. The input shape is (28,28,1), representing a grayscale image.</span></li>
+                        <li><span style="color: rgb(0, 0, 0); background-color: transparent;">Max pooling layer: A max pooling layer follows the convolutional layer to downsample the spatial dimensions.</span></li>
+                        <li><span style="color: rgb(0, 0, 0); background-color: transparent;">Flattening layer: The output of the max pooling layer is flattened into a 1D vector to prepare it for the dense layers.</span></li>
+                        <li><span style="color: rgb(0, 0, 0); background-color: transparent;">Hidden layer: A dense layer with 100 units and ReLU activation is added. It captures higher-level features in the data.</span></li>
+                        <li><span style="color: rgb(0, 0, 0); background-color: transparent;">Output layer: The final dense layer has 10 units with a softmax activation function. It produces the predicted probabilities for each class.</span></li>
+                    </ul>
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">This code sets up a CNN model with convolutional, pooling, flattening, and dense layers, suitable for image classification tasks.</span></p><img class="img-fluid" src="assets/img/post1/Picture6.png">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">The code snippet compiles a sequential model for training and evaluation.</span><br><br></p>
+                    <ul>
+                        <li><span style="color: rgb(0, 0, 0); background-color: transparent;">Compilation: The model is configured using model.compile(). This step prepares the model for training by specifying the loss function, metrics, and optimizer.</span></li>
+                        <li><span style="color: rgb(0, 0, 0); background-color: transparent;">Loss function: The 'categorical_crossentropy' loss function is chosen. It measures the dissimilarity between the predicted and true labels, specifically for multiclass classification problems.</span></li>
+                        <li><span style="color: rgb(0, 0, 0); background-color: transparent;">Metrics: The 'accuracy' metric is defined to evaluate the model's performance. It calculates the proportion of correctly predicted instances during training and evaluation.</span></li>
+                        <li><span style="color: rgb(0, 0, 0); background-color: transparent;">Optimizer: The 'adam' optimizer is selected. It adjusts the model's weights based on the gradients of the loss function, efficiently optimizing the model's performance.</span></li>
+                    </ul>
+                    <p><br><span style="color: rgb(0, 0, 0); background-color: transparent;">By compiling the model with these settings, it is ready to be trained on the provided data, enabling it to learn and improve its predictions.</span><br><br></p><img class="img-fluid" src="assets/img/post1/Picture7.png"><img class="img-fluid" src="assets/img/post1/Picture8.png">
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">The code trains the compiled sequential model for 10 epochs using the fit() function. The specified parameters include the training data (X_train and Y_train), batch size (128), number of epochs (10), and validation data (X_test and Y_test). During training, the model learns to make predictions based on the input data and adjusts its internal weights to minimize the defined loss function.&nbsp;</span></p>
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">After training, the model is used to make predictions on the training data using the predict() function. The predictions are obtained as probabilities for each class. The np.argmax() function is then applied to each prediction to identify the digit with the highest probability, representing the predicted digit for each input. Finally, the predicted digits are printed using the print() function to display the model's predictions on the training data.</span><br><br></p>
+                    <hr>
+                    <h2 style="margin-top: 24px;margin-bottom: 24px;"><strong>Scenarios where neural network can be applied and where our implementation could be useful:</strong></h2>
+                    <ul>
+                        <li style="text-align: justify;padding-bottom: 24px;">Optical character recognition (OCR) - CNNs can be used to recognize handwritten characters in scanned documents and images, allowing for the conversion of handwritten text to digital text.</li>
+                        <li style="text-align: justify;padding-bottom: 24px;">Automated check processing - Banks and financial institutions can use CNNs to recognize handwritten digits on checks, allowing for faster and more accurate processing of checks.</li>
+                        <li style="text-align: justify;padding-bottom: 24px;">Medical image analysis - CNNs can be used to recognize hand-written numbers on medical images, such as X-rays, MRIs, and CT scans, which can help in identifying specific regions or areas of interest in the images.&nbsp;</li>
+                    </ul>
+                    <p style="text-align: justify;"></p><a href="#"></a><span class="text-muted caption">That is all, Thank you!</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                    </ul>
+                    <p class="text-muted copyright">Copyright&nbsp;©&nbsp;Machine Learning 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/clean-blog.js"></script>
+</body>
+
+</html>

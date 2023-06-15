@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Blog Post - Machine Learning</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="index.html">CSC 120</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-1.html"><strong>Neural Network</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-2.html"><strong>Deep Learning</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-3.html"><strong>LOGISTIC REGRESSION</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-4.html"><strong>SIMPLE LINEAR REGRESSION</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-5.html"><strong>reinforcement learning</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image: url('assets/img/brain-logical-part-creative-part-wallpaper-preview.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="post-heading">
+                        <h1><strong>LOGISTIC REGRESSION</strong></h1><span class="meta">Kierwinjan Matias<br>Leo Alegre<br>Joanna Mae Domingo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <p style="text-align: justify;">IN THIS PROJECT, WE WILL SEE HOW TO TRAIN A LOGISTIC REGRESSION MODEL. THIS IS INTENDED AS AN INTRODUCTION TO LOGISTIC REGRESSION. HOWEVER, WE WILL NOT GO THROUGH THE MATHEMATICAL INTUITION OF THE MODEL.</p>
+                    <p style="text-align: justify;">We will be working with the Breast Cancer dataset, which contains some very detailed measurements of cells. Along with each observation of measurements, we have the diagnosis of the cell (malignant or not). Our goal is to train a model that will be able to predict whether or not a given cell is malignant given only its measurements.</p>
+                    <p><strong>IMPORT THE DATA</strong></p><img class="img-fluid" src="assets/img/post3/Picture22.png">
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">This code imports the NumPy, pandas, and seaborn libraries. The NumPy, pandas, and seaborn libraries will be available for use in the current Python environment. These libraries offer a wide range of functionality for data manipulation, numerical computations, and data visualization, which can be helpful in various data analysis tasks.</span><br><br></p><img class="img-fluid" src="assets/img/post3/Picture23.png"><img class="img-fluid" src="assets/img/post3/Picture24.png"><img class="img-fluid" src="assets/img/post3/Picture25.png">
+                    <hr><img class="img-fluid" src="assets/img/post3/Picture26.png"><img class="img-fluid" src="assets/img/post3/Picture27.png">
+                    <p><strong>CLEAN THE DATA BY USING A HEATMAP</strong></p><img class="img-fluid" src="assets/img/post3/Picture28.png">
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">This code snippet performs various operations on the DataFrame 'data' using the seaborn and pandas libraries. It generates a heatmap to visualize missing values in the DataFrame, drops specific columns ('Unnamed: 32' and 'id'), converts the values in the 'diagnosis' column to numerical values, and creates a bar plot to display the class distributions. The code provides insights into the missing data, data transformation, and visualization of class distributions in the 'diagnosis' column.</span><br><br></p><img class="img-fluid" src="assets/img/post3/Picture29.png">
+                    <p><strong>LOGISTIC REGRESSION&nbsp;PREPROCESSING</strong></p><img class="img-fluid" src="assets/img/post3/Picture30.png">
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">In this code snippet, the target variable ('diagnosis') and the predictors (all columns except 'diagnosis') are assigned based on the data DataFrame. The 'diagnosis' column is assigned to the variable y as the target variable, and all columns except 'diagnosis' are assigned to the variable X as the predictors. This separation of the target variable and predictors is a common practice in machine learning to prepare the data for modeling tasks such as training and evaluation.</span><br><br></p>
+                    <p><strong>NORMALIZE THE DATA</strong></p>
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">This code snippet performs the following steps:</span></p><img class="img-fluid" src="assets/img/post3/Picture31.png">
+                    <ol>
+                        <li style="text-align: justify;margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Importing necessary modules: The code imports the StandardScaler class from sklearn.preprocessing, train_test_split function from sklearn.model_selection, and LogisticRegression class from sklearn.linear_model.</span></li>
+                        <li style="text-align: justify;margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Preparing the data: An instance of the StandardScaler class is created and used to scale the features in the data using the fit_transform() method. The scaled features are stored in X_scaled.</span></li>
+                        <li style="text-align: justify;margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Splitting the data: The train_test_split function is used to split the scaled features (X_scaled) and the target variable (y) into training and testing sets. The test_size argument specifies the proportion of data to be used for testing, and the random_state argument ensures reproducibility of the split. The resulting training and testing sets are stored in variables X_train, X_test, y_train, and y_test.</span></li>
+                        <li style="text-align: justify;margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Training the logistic regression model: An instance of the LogisticRegression class is created, and the model is trained using the fit() method with the training data (X_train and y_train). The model adjusts its parameters to minimize the loss function during training.</span></li>
+                        <li style="text-align: justify;margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Making predictions: The trained logistic regression model is used to make predictions on the test data (X_test) using the predict() method. The predicted values are stored in the variable y_pred.</span></li>
+                    </ol>
+                    <p><br><span style="color: rgb(0, 0, 0); background-color: transparent;">Overall, this code prepares the data, trains a logistic regression model on the scaled training data, and then uses the trained model to make predictions on the scaled test data.</span><br><br></p>
+                    <p><strong>EVALUATE THE MODEL</strong></p>
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">This code snippet performs the following steps:</span></p><img class="img-fluid" src="assets/img/post3/Picture32.png">
+                    <ol>
+                        <li style="text-align: justify;margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Importing necessary modules: The code imports the accuracy_score and classification_report functions from sklearn.metrics.</span></li>
+                        <li style="text-align: justify;margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Evaluating accuracy: The accuracy_score function is used to calculate the accuracy of the logistic regression model. It compares the predicted labels (y_pred) with the true labels (y_test), and the resulting accuracy score is stored in the variable accuracy.</span></li>
+                        <li style="text-align: justify;margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Printing accuracy: The accuracy of the model is printed using a formatted string, displaying the accuracy value with two decimal places.</span></li>
+                        <li style="text-align: justify;margin-top: 24px;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Generating classification report: The classification_report function is used to generate a detailed report for evaluating the performance of the logistic regression model. It compares the predicted labels (y_pred) with the true labels (y_test), and the resulting report is printed.</span></li>
+                    </ol>
+                    <p><br><span style="color: rgb(0, 0, 0); background-color: transparent;">Overall, this code evaluates the accuracy of the logistic regression model by comparing the predicted labels with the true labels. It also provides a detailed classification report that includes metrics such as precision, recall, F1-score, and support for each class, along with the overall accuracy score.</span><br><br></p>
+                    <p><strong>SCENARIOS&nbsp;WHERE LOGISTIC REGRESSION CAN BE APPLIED AND WHERE OUR IMPLEMENTATION COULD BE USEFUL:</strong></p>
+                    <ul>
+                        <li style="margin-top: 24px;"><strong>DISEASE DIAGNOSIS</strong> - CAN BE USED TO PREDICT THE LIKELIHOOD OF A PATIENT HAVING A DISEASE BASED ON THEIR MEDICAL HISTORY AND OTHER RELEVANT FACTORS.&nbsp;</li>
+                        <li style="margin-top: 24px;"><strong>CREDIT SCORING</strong> - CAN BE USED TO PREDICT WHETHER A CUSTOMER IS LIKELY TO DEFAULT ON A LOAN BASED ON THEIR FINANCIAL HISTORY AND OTHER RELEVANT FACTORS.&nbsp;</li>
+                        <li style="margin-top: 24px;"><strong>CUSTOMER SEGMENTATION </strong>- CAN BE USED TO PREDICT WHETHER A CUSTOMER IS LIKELY TO BUY A PRODUCT BASED ON THEIR DEMOGRAPHIC AND BEHAVIORAL CHARACTERISTICS, AND CAN BE USEFUL IN MARKETING AND CUSTOMER RELATIONSHIP MANAGEMENT.&nbsp;</li>
+                    </ul><span class="text-muted caption">Thank you!</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                    </ul>
+                    <p class="text-muted copyright">Copyright&nbsp;©&nbsp;Machine Learning 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/clean-blog.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Blog Post - Machine Learning</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="index.html">CSC 120</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-1.html"><strong>Neural Network</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-2.html"><strong>Deep Learning</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-3.html"><strong>LOGISTIC REGRESSION</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-4.html"><strong>SIMPLE LINEAR REGRESSION</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-5.html"><strong>reinforcement learning</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image: url('assets/img/578082-637199624574737751-16x9.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="post-heading">
+                        <h1><strong>SIMPLE LINEAR REGRESSION</strong></h1><span class="meta">Kierwinjan Matias<br>Leo Alegre<br>Joanna Mae Domingo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <p><strong>STUDENT DATASET:&nbsp;</strong></p>
+                    <p style="text-align: justify;">In this regression task we will predict the percentage of marks that a student is expected to score based upon the number of hours they studied. This is a simple linear regression task as it involves just two variables.&nbsp;</p>
+                    <p><strong>IMPORTING THE LIBRARIES&nbsp;</strong></p><img class="img-fluid" src="assets/img/post4/Picture33.png">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">This code snippet is importing the necessary libraries for data analysis and visualization. By importing these libraries, the code sets up the environment for data analysis, numerical operations, and visualizations using pandas, numpy, and matplotlib.</span><br><br></p>
+                    <p><strong>LOADING THE DATASET&nbsp;</strong></p><img class="img-fluid" src="assets/img/post4/Picture34.png">
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">This code imports a CSV dataset from a specified URL using the pandas library. The dataset is loaded into a DataFrame object called </span><span style="color: rgb(24, 128, 56); background-color: transparent;">data</span><span style="color: rgb(0, 0, 0); background-color: transparent;">. A confirmation message is printed to indicate a successful import. The first 10 rows of the dataset are then displayed to provide a preview of the data.In summary, the code fetches and imports a CSV dataset, allowing for further analysis and manipulation using the pandas library.</span><br><br></p>
+                    <p><strong>INFORMATION OF DATASET</strong></p><img class="img-fluid" src="assets/img/post4/Picture35.png">
+                    <p><br><span style="color: rgb(0, 0, 0); background-color: transparent;">This code block provides an analysis of a dataset by extracting important information such as its structure and the presence of missing values.&nbsp;</span></p>
+                    <ol>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">data.info()</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> displays a summary of the dataset, including column names, data types, and the number of non-null values in each column. It gives an overview of the dataset's structure.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">data.shape</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> returns the dimensions of the dataset as a tuple, representing the number of rows and columns. It provides a quick way to understand the size of the dataset.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">data.isnull().sum()</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> calculates the count of missing values for each column. It identifies columns with missing data and quantifies the extent of missingness in each column.</span></li>
+                    </ol>
+                    <p><br><span style="color: rgb(0, 0, 0); background-color: transparent;">It will give insights into the dataset's structure, assess data quality through the presence of missing values, and determine the overall size of the dataset.</span><br><br></p>
+                    <p><strong>PLOTTING THE DATA&nbsp;</strong></p>
+                    <p><br><span style="color: rgb(0, 0, 0); background-color: transparent;">This code creates a scatter plot using matplotlib to depict the correlation between the 'Hours' and 'Scores' columns in the DataFrame </span><span style="color: rgb(24, 128, 56); background-color: transparent;">data</span><span style="color: rgb(0, 0, 0); background-color: transparent;">.&nbsp;</span><br><br></p><img class="img-fluid" src="assets/img/post4/Picture36.png">
+                    <ol>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">data.plot(x='Hours', y='Scores', style='o')</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> generates a scatter plot with 'Hours' on the x-axis and 'Scores' on the y-axis. Each data point is represented by a circle marker ('o').</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">plt.title('Hours vs Percentage of Scores')</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> sets the title of the plot as 'Hours vs Percentage of Scores'.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">plt.xlabel('Hours Studied')</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> labels the x-axis as 'Hours Studied'.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">plt.ylabel('Percentage Score')</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> labels the y-axis as 'Percentage Score'.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">plt.show()</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> displays the scatter plot.</span></li>
+                    </ol>
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">A scatter plot will be generated illustrating the relationship between the hours studied and the corresponding scores. This visualization helps to understand any patterns or trends in the data.</span><br><br></p>
+                    <p><strong>PREPARING THE DATA&nbsp;</strong></p>
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">This code snippet performs the extraction of feature values and label values from a DataFrame called </span><span style="color: rgb(24, 128, 56); background-color: transparent;">data</span><span style="color: rgb(0, 0, 0); background-color: transparent;">.&nbsp;</span></p><img class="img-fluid" src="assets/img/post4/Picture37.png">
+                    <ul>
+                        <li><span style="color: rgb(24, 128, 56); background-color: transparent;">X = data.iloc[:, :-1].values</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> extracts the feature values from the DataFrame. It selects all rows and all columns except for the last one. The resulting values are stored in the variable </span><span style="color: rgb(24, 128, 56); background-color: transparent;">X</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> as a NumPy array.</span></li>
+                        <li><span style="color: rgb(24, 128, 56); background-color: transparent;">y = data.iloc[:, 1].values</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> extracts the label values from the DataFrame. It selects all rows and the column at index 1. The resulting values are stored in the variable </span><span style="color: rgb(24, 128, 56); background-color: transparent;">y</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> as a NumPy array.</span></li>
+                    </ul>
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">The code separates the feature values and label values from the DataFrame </span><span style="color: rgb(24, 128, 56); background-color: transparent;">data</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> and assigns them to the variables </span><span style="color: rgb(24, 128, 56); background-color: transparent;">X</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> and </span><span style="color: rgb(24, 128, 56); background-color: transparent;">y</span><span style="color: rgb(0, 0, 0); background-color: transparent;">, respectively. This is a common step in machine learning tasks, where the features are used as input data and the labels are the target values to be predicted or classified.</span><br><br></p>
+                    <p><strong>PLOTTING THE LINEAR REGRESSION</strong></p>
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">This code snippet creates a scatter plot of data points and overlays a linear regression line to visualize the relationship between the features and labels.&nbsp;</span><br><br></p><img class="img-fluid" src="assets/img/post4/Picture38.png">
+                    <ul>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">line = linearregressor.coef_*X+linearregressor.intercept_</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> calculates the values for the linear regression line using coefficients and intercept obtained from a trained linear regression model.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">plt.scatter(X, y)</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> creates a scatter plot of the data points, with feature values </span><span style="color: rgb(24, 128, 56); background-color: transparent;">X</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> on the x-axis and label values </span><span style="color: rgb(24, 128, 56); background-color: transparent;">y</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> on the y-axis.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">plt.plot(X, line)</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> plots the linear regression line on the same plot, using feature values </span><span style="color: rgb(24, 128, 56); background-color: transparent;">X</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> as the x-axis values and the calculated values </span><span style="color: rgb(24, 128, 56); background-color: transparent;">line</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> as the y-axis values.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">plt.show()</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> displays the plot.</span></li>
+                    </ul>
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">A scatter plot is generated with data points representing the relationship between the features and labels. The linear regression line visualizes the fitted model, showing how well the line fits the data points. This plot helps in understanding the correlation and trend between the variables.</span></p>
+                    <p><strong>CHECKING WHETHER MODEL IS GENERALISED MODEL OR NOT</strong></p>
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">This code snippet evaluates and displays key metrics and parameters for a linear regression model.&nbsp;</span></p><img class="img-fluid" src="assets/img/post4/Picture39.png">
+                    <ul>
+                        <li><span style="color: rgb(24, 128, 56); background-color: transparent;">linearregressor.score(X_train, y_train)</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> calculates the R-squared value for the linear regression model on the training data and </span><span style="color: rgb(24, 128, 56); background-color: transparent;">linearregressor.score(X_test, y_test)</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> calculates it for the testing data. These values represent the goodness of fit of the model, indicating the proportion of the target variable's variance that can be explained by the model.</span></li>
+                        <li><span style="color: rgb(24, 128, 56); background-color: transparent;">linearregressor.intercept_</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> prints the intercept term of the linear regression model, which is the y-intercept of the fitted regression line.</span></li>
+                        <li><span style="color: rgb(24, 128, 56); background-color: transparent;">linearregressor.coef_</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> prints the coefficients of the linear regression model, representing the slopes or weights assigned to each feature in the regression equation.</span></li>
+                    </ul>
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">It will show the&nbsp; obtained R-squared values for both the training and testing data, the intercept term, and the coefficients of the linear regression model. These metrics provide insights into the model's performance, the influence of each feature, and the relationship between the features and the target variable.</span></p>
+                    <p><strong>MAKING PREDICTIONS</strong></p>
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">It will show the&nbsp; obtained R-squared values for both the training and testing data, the intercept term, and the coefficients of the linear regression model. These metrics provide insights into the model's performance, the influence of each feature, and the relationship between the features and the target variable.</span><br><br></p><img class="img-fluid" src="assets/img/post4/Picture40.png">
+                    <p><em>COMPARING ACTUAL VS PREDICTED</em></p>
+                    <ul>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">y_pred = linearregressor.predict(X_test)</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> uses the trained linear regression model to predict scores for the testing data.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">df = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> creates a DataFrame called df that stores the actual scores and the predicted scores side by side.</span></li>
+                        <li style="margin-top: 24px;"><span style="color: rgb(24, 128, 56); background-color: transparent;">df</span><span style="color: rgb(0, 0, 0); background-color: transparent;"> prints the DataFrame, displaying the actual scores and the corresponding predicted scores for the testing data.</span></li>
+                    </ul>
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">It will show the testing data and compare the predicted scores with the actual scores. The DataFrame provides a convenient way to analyze and evaluate the performance of the linear regression model.</span><br><br></p>
+                    <p><strong>EVALUATING THE MODEL</strong></p><img class="img-fluid" src="assets/img/post4/Picture41.png">
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">This code calculates and prints evaluation metrics for a linear regression model. The metrics include the Mean Absolute Error (MAE), Mean Squared Error (MSE), and Root Mean Squared Error (RMSE). These metrics are used to assess the performance of the model by comparing the predicted scores to the actual scores. The MAE represents the average absolute difference between the predicted and actual scores. The MSE measures the average squared difference between the predicted and actual scores. The RMSE is the square root of the MSE and provides a more interpretable measure of the average error. By examining these metrics, you can assess the accuracy and quality of the linear regression model's predictions.</span></p>
+                    <p><strong>DEPLOYING THE MODEL</strong></p><img class="img-fluid" src="assets/img/post4/Picture42.png">
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">The code predicts the score based on a given number of hours using a trained linear regression model. The number of hours is specified as 9.25 and stored in a 2D array called "hours". The predict() method of the linear regression model is then used to predict the score based on the given hours, and the result is stored in the variable "own_pred". The given number of hours is printed using a formatted string, and the predicted score is also printed using a formatted string. This allows you to see the predicted score for the specified number of hours according to the linear regression model.</span><br><br></p>
+                    <p style="text-align: justify;"><strong>Scenarios where simple linear regression can be applied and where our implementation could be useful:</strong></p>
+                    <ul>
+                        <li style="text-align: justify;margin-top: 24px;"><strong>Education </strong>- can be used by educators to analyze the relationship between variables like hours studied and exam scores. Information can be used to optimize study techniques and improve student performance.</li>
+                        <li style="text-align: justify;margin-top: 24px;"><strong>Business </strong>- can be used to predict sales or revenue based on factors like marketing spend or customer traffic. This can help businesses optimize their operations and make informed decisions about resource allocation.</li>
+                    </ul><span class="text-muted caption">That is all, Thank you!</span><a href="#"></a>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                    </ul>
+                    <p class="text-muted copyright">Copyright&nbsp;©&nbsp;Machine Learning 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/clean-blog.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Blog Post - Machine Learning</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="index.html">CSC 120</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-1.html"><strong>Neural Network</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-2.html"><strong>Deep Learning</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-3.html"><strong>LOGISTIC REGRESSION</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-4.html"><strong>SIMPLE LINEAR REGRESSION</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="post-5.html"><strong>reinforcement learning</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image: url('assets/img/8dAnJ9.webp');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="post-heading">
+                        <h1><strong>Reinforcement Learning</strong></h1><span class="meta">Kierwinjan Matias<br>Leo Alegre<br>Joanna Mae Domingo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <p><strong>STUDENT DATASET:&nbsp;</strong></p><img class="img-fluid" src="assets/img/post5/pasted%20image%200.png">
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0);">Utilize OpenAI Gym it is an open-source library where it allows you toperform an agent in a particular environment depending on its desired functions. Hence, researchers will use OpenAI Gym for comparing each model since it offers a standardized, accessible, and reproducible environment, enabling to conduct fair and meaningful evaluations of their reinforcement learning algorithms.</span></p>
+                    <p style="text-align: justify;"><strong><span style="color: rgb(0, 0, 0); background-color: transparent;">Agent : </span></strong><span style="color: rgb(0, 0, 0); background-color: transparent;">Our agent was Mavic 2 pro drone&nbsp;</span></p>
+                    <p style="text-align: justify;"><strong><span style="color: rgb(0, 0, 0); background-color: transparent;">Action :</span></strong><span style="color: rgb(0, 0, 0); background-color: transparent;"> The drone moves in a 2D plane in a fixed height.&nbsp;</span><br><span style="color: rgb(0, 0, 0); background-color: transparent;">The movements that the drone allows to do are: forward, rotate left, rotate right.</span></p>
+                    <p style="text-align: justify;"><strong><span style="color: rgb(0, 0, 0); background-color: transparent;">Environment : </span></strong><span style="color: rgb(0, 0, 0); background-color: transparent;">There will be 4 environments (Lidar Environment, Object Detection Environment, Wall Type - Combined Environment, and Maze Type - Combined Environment) and each environment will become the training ground for 3 reinforcement algorithm(PPO, DQN, A2C)</span></p>
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Observation/Reward - Observation of the drone will be Lidar and camera recognition of objects. Drone will be rewarded if the recognized object size is increasing, if the drone is near to the object, if the recognized object is centered, and penalized if the drone is taking a lot of time in reaching its goal.</span></p>
+                    <p><strong><span style="color: rgb(0, 0, 0); background-color: transparent;">LiDAR Environment</span></strong></p><img class="img-fluid" src="assets/img/post5/pasted%20image%200%20(1).png" width="616" height="603">
+                    <hr><img class="img-fluid" src="assets/img/post5/pasted%20image%200%20(10).png" width="616" height="382">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.1.1 LiDAR Environment Length Mean Training Result</span></p><img src="assets/img/post5/pasted%20image%200%20(2).png" width="623" height="334">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.1.2 LiDAR Environment Reward Mean Training Result</span></p><img src="assets/img/post5/pasted%20image%200%20(2).png" width="603" height="337">
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.1.3 LiDAR Environment Time/FPS Training Result</span></p>
+                    <p style="text-align: justify;"><br><span style="color: rgb(0, 0, 0); background-color: transparent;">In Light Detection and Ranging (LiDAR), three (3) deep reinforcement learning algorithms&nbsp; were also evaluated. As shown in the illustration [Figure 4.2], only the Proximal Policy&nbsp; Figure 4.1.2 LiDAR Environment Reward Mean Training Result Figure 4.1.3 LiDAR Environment Time/FPS Training Result 52 Optimization (PPO) had successfully navigated the environment and was able to avoid obstacles&nbsp; in the scene. Through the use of PPO, the agent learns to make decisions that lead to successful&nbsp; navigation of the environment, while avoiding obstacles and hazards. PPO is particularly well suited for continuous control tasks, such as robotic locomotion, where smooth and precise control&nbsp; of the agent is required. Successful navigation with PPO typically involves the agent learning to explore and gather&nbsp; information about the environment, such as the location of obstacles and hazards, and then use this&nbsp; information to make decisions about how to move through the environment. PPO is designed to&nbsp; optimize the agent's policy in a way that balances exploration and exploitation, which is crucial&nbsp; for effective navigation.</span><br><br></p>
+                    <p><strong><span style="color: rgb(0, 0, 0); background-color: transparent;">Object Detection Environment</span></strong></p><img src="assets/img/post5/pasted%20image%200%20(5).png" width="617" height="563"><img src="assets/img/post5/pasted%20image%200%20(6).png" width="618" height="356">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.2.1 Object Detection Environment Length Mean Training Result</span></p><img src="assets/img/post5/pasted%20image%200%20(7).png" width="623" height="344">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.2.2 Object Detection Environment Reward Mean Training Result</span></p><img src="assets/img/post5/pasted%20image%200%20(8).png" width="639" height="364">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.2.1 Object Detection Time/FPS Training Result</span></p>
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Based on the metrics above (Figure 4.2.1 - 4.2.3), three (3) deep reinforcement learning&nbsp; algorithms that support discrete movement performance were evaluated in terms of object&nbsp; detection. Though all the selected DRL models completed the object search, it shows that&nbsp; Advantage Actor Critic (A2C), the agent, learned to navigate in the scene way better than PPO&nbsp; and DQN.&nbsp; Compared to other popular reinforcement learning algorithms like DQN and PPO, A2C&nbsp; has demonstrated superior performance in tasks that involve navigating an environment and&nbsp; detecting objects. In this environment, A2C is efficient compared to PPO and PPO is much better&nbsp; than DQN. Both A2C and PPO received high reward mean and high episode length mean with respect to time as it continues to navigate and complete the objectives efficiently, while DQN has&nbsp; stable behavior in graph which means the model has learned a policy that is effective at navigating&nbsp; 56 environments and completing the task. However, it's important to note that the stability of the&nbsp; DQN model may come at the cost of potentially missing out on more optimal solutions or not&nbsp; being able to adapt as well to changes in the environment. It may have limitations in terms of&nbsp; adaptability and exploration compared to A2C and PPO. As the training duration progresses, the A2C agent is able to accumulate more experience&nbsp; and update its policy parameters more effectively, leading to improved performance and faster&nbsp; completion of the objectives compared to PPO and DQN. A2C's efficient adaptation to changes in&nbsp; the environment and fast completion of objectives indicates that its decision-making capability led&nbsp; to successful navigation and object detection.</span><br><br></p>
+                    <p><strong><span style="color: rgb(0, 0, 0); background-color: transparent;">Object Detection combined with LiDAR (Wall Type)</span></strong></p><img src="assets/img/post5/pasted%20image%200%20(9).jpg" width="609" height="613"><img src="assets/img/post5/pasted%20image%200%20(10).png" width="610" height="362">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.3.1 Wall-Type Length Mean Training Result</span></p><img src="assets/img/post5/pasted%20image%200%20(11).png" width="616" height="354">
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.3.2 Wall-Type Reward Mean Training Result</span></p><img src="assets/img/post5/pasted%20image%200%20(12).png" width="625" height="354">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.3.1 Wall-Type Time/FPS Training Result</span></p>
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">The metrics of Advantage Actor-Critic (A2C) includes average episode length, average&nbsp; reward mean and the time/fps shows a straight line which indicates a consistent performance&nbsp; level and basically the agent is repeating the same the previous actions rather than adapting its&nbsp; behavior to the environment. The DQN model trained agent was unable to adapt and identify the&nbsp; object in the environment. Hence, the agent is stuck in suboptimal policy due to limited exploration&nbsp; in which it continuously rotates in the environment. The Proximal Policy Optimization (PPO) model trained agent showed a high episode&nbsp; reward mean and a fluctuating episode length mean with a relatively stable time/fps indicate that&nbsp; the agent is efficiently completing its task while processing a large amount of data leading to better&nbsp; performance in completing the task. In addition, as seen in the demonstration the agent had&nbsp; successfully identified the target object and navigated towards the object.</span></p>
+                    <p style="text-align: justify;"><strong><span style="color: rgb(0, 0, 0); background-color: transparent;">Object Detection combined with LiDAR (Maze Type)</span></strong></p><img src="assets/img/post5/pasted%20image%200%20(13).png" width="608" height="500"><img src="assets/img/post5/pasted%20image%200%20(14).png" width="624" height="374">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.3.1 Wall-Type Length Mean Training Result</span></p><img src="assets/img/post5/pasted%20image%200%20(15).png" width="624" height="364">
+                    <p><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.3.2 Wall-Type Reward Mean Training Result</span></p><img src="assets/img/post5/pasted%20image%200%20(16).png" width="618" height="353">
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">Figure 4.3.1 Wall-Type Time/FPS Training Result</span></p>
+                    <p style="text-align: justify;"><span style="color: rgb(0, 0, 0); background-color: transparent;">The metrics of Advantage Actor-Critic (A2C) includes average episode length, average&nbsp; reward mean and the time/fps shows a straight line which indicates a consistent performance&nbsp; level and basically the agent is repeating the same the previous actions rather than adapting its&nbsp; behavior to the environment. The DQN model trained agent was unable to adapt and identify the&nbsp; object in the environment. Hence, the agent is stuck in suboptimal policy due to limited exploration&nbsp; in which it continuously rotates in the environment. The Proximal Policy Optimization (PPO) model trained agent showed a high episode&nbsp; reward mean and a fluctuating episode length mean with a relatively stable time/fps indicate that&nbsp; the agent is efficiently completing its task while processing a large amount of data leading to better&nbsp; performance in completing the task. In addition, as seen in the demonstration the agent had&nbsp; successfully identified the target object and navigated towards the object.</span></p><span class="text-muted caption">That is all, Thank you!</span><a href="#"></a>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i></span></li>
+                    </ul>
+                    <p class="text-muted copyright">Copyright&nbsp;©&nbsp;Machine Learning 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/clean-blog.js"></script>
+</body>
+
+</html>
